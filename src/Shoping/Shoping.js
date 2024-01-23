@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Cookies from 'js-cookie';
 import { Redirect, Link } from 'react-router-dom';
 import Header from '../Header/Header';
-import { BsFilterRight } from 'react-icons/bs';
+
 import ShopingItems from '../ShopingItems.js/ShopingItems';
 import './Shoping.css';
 
