@@ -1,0 +1,32 @@
+.CartItems{
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    display: flex;
+    flex-direction: row;
+  
+    width: 100%;
+    flex-wrap: wrap
+}
+/* CSS for your button */
+.amount-button {
+    background-color: #2196f3; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .amount-button:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    .amount-button {
+      width: 100%;
+    }
+  }
+  

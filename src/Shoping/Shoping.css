@@ -1,0 +1,175 @@
+/* Apply basic styling to the container div */
+.container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Style the search input */
+.search-input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the search button with a scale animation */
+.search-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Style the "All Products" section container */
+.products-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure items wrap to the next line on smaller screens */
+}
+
+/* Style the heading inside the "All Products" container with a fade-in effect */
+.products-heading {
+  margin-right: 10px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Style the filter icon with a rotation animation */
+.filter-icon {
+  margin-right: 5px;
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Style the "Sort by" select box */
+.sort-select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px;
+}
+
+/* Style the button inside the Link with a background color change on hover */
+/* ... Your existing CSS rules ... */
+
+/* Style the button inside the Link with a background color change on hover and animation */
+.link-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  animation: typing 3s steps(20, end);
+  overflow: hidden; /* Ensure the text is hidden initially */
+  white-space: nowrap; /* Prevent line break */
+  position: relative;
+}
+
+.link-btn::after {
+  content: ''; /* Add a pseudo-element to simulate typing animation */
+  display: inline-block;
+  vertical-align: bottom;
+  width: 0;
+  overflow: hidden;
+  border-right: 2px solid #fff; /* You can adjust the border style as needed */
+  margin-left: 5px; /* Adjust spacing between letters */
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* Start with zero width, gradually increase it */
+  }
+  to {
+    width: 100%; /* Full width at the end of animation */
+  }
+}
+
+.link-btn:hover {
+  background-color: #218838;
+}
+
+/* Loading Animation */
+.Loading h1 {
+  overflow: hidden; /* Ensure the text is hidden initially */
+  white-space: nowrap; /* Prevent line break */
+  /* Set animation properties */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Style the ShopingItems component with a fade-in effect */
+.shopping-item {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  display: flex;
+  flex-direction: row;
+  color: red;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.Timer{
+  width: 1000px;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.Sort{
+  display: flex;
+  
+  gap: 20px;
+}
+
+/* Responsive Design - Adjust styles for smaller screens */
+@media (max-width: 600px) {
+  .search-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .shopping-item{
+    flex-direction: column;
+  }
+
+  .products-container {
+    flex-direction: column;
+  }
+
+  .link-btn {
+    width: 100%; /* Make the link button full width on smaller screens */
+  }
+  .Timer{
+    width:330px ;
+    height: 200px;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,9 @@
+.Main{
+ font-family: Georgia, 'Times New Roman', Times, serif;
+   
+    padding: 10px;
+
+    border: solid 1px black;
+    border-radius: 8px;
+    margin: 8px;
+}

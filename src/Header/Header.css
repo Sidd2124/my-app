@@ -1,0 +1,56 @@
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+    color: #fff;
+  }
+  
+  .logout-btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .chart-link {
+    text-decoration: none;
+  }
+  
+  .chart-btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chart-btn:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 600px) {
+    .header-nav {
+      flex-direction: row;
+   justify-content: space-between;
+    }
+  
+    .logout-btn {
+      margin-top: 10px;
+      margin-right: 0;
+    }
+  
+    .chart-btn {
+      margin-top: 10px;
+    }
+  }
+  

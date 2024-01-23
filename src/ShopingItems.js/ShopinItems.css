@@ -1,0 +1,82 @@
+.product-container {
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction:column ;
+  margin: 6px;
+  padding: 6px;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+}
+
+.product-container:hover {
+  transform: scale(1.05); /* Slightly increased scaling on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.product-container div {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-logo {
+  
+width:330px ;
+  margin-bottom: 15px;
+  border-radius: 12px; /* Adding border-radius to the product logo */
+}
+
+.price {
+  font-weight: bold;
+  margin: 10px 0; /* Increased margin for better spacing */
+}
+
+.rating {
+  margin: 10px 0; /* Increased margin for better spacing */
+  display: flex;
+  align-items: center;
+}
+
+.rating span {
+  margin-left: 5px;
+  color: #ffc107; /* Setting a color for the rating stars */
+}
+.add-to-cart:hover {
+  background-color: orange;
+}
+
+.add-to-cart {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px; /* Increased padding for better button size */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background-color: #45a049;
+}
+
+/* Responsive styling */
+
+
+
+@media (max-width: 600px) {
+  .product-container {
+    width: calc(100% - 12px); /* Adjust width to account for margins */
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .product-container div {
+    padding: 15px; /* Adjust padding for better spacing on small screens */
+  }
+}
+
