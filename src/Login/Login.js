@@ -16,7 +16,8 @@ const Login = (props) => {
   const [FinelPassword,SetFinelPassword]=useState("")
   
  
-
+console.log(UserName)
+console.log(Password)
   
   const Login = async () => {
     
