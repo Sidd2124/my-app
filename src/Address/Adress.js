@@ -47,7 +47,7 @@ const AddressDetails = () => {
     <form ref={form} onSubmit={sendEmail} className="Email" style={{ display: Displey }}
     >
      <h3 className='Animi'>
-      <span className='typing-text'>Share Address to Deliver..</span>
+      <span className='typing-text'>Share Address to Deliver...</span>
       <CiDeliveryTruck className='delivery-icon' />
     </h3>
       <label>Name :</label>
