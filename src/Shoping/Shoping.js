@@ -36,7 +36,7 @@ class Shoping extends Component {
       if(Counting===54){
 this.setState({Counting:0})
       }
-    },1100)
+    },1300)
   }
 
   componentDidUpdate(_, prevState) {
