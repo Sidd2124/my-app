@@ -74,6 +74,7 @@ return (
   <div className="login-container">
     <h3>Sidd Store Welcome's You...🤝</h3>
     <input
+  
       className="login-input"
       type="text"
       placeholder="Enter UserName"
@@ -85,6 +86,7 @@ return (
       }}
     />
     <input
+  
       className="login-input"
       type={showPassword?"password":"Text"}
       placeholder="Enter Password"

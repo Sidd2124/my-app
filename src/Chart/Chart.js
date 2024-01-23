@@ -27,7 +27,7 @@ const MyChart = () => {
    
     <div>
       {ChartValue.length === 0 ? (
-        <><h1> Your Cart is Empty.....Tap to👇</h1><Link to="/Shop"><FaShopify className="logout-btn" /></Link></>
+        <><h1> Your Cart is Empty.....Tap to👇Shop</h1><Link to="/Shop"><FaShopify className="logout-btn" /></Link></>
       ) : (
         <div>
           <Header/>

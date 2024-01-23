@@ -7,6 +7,9 @@
     width: 100%;
     flex-wrap: wrap
 }
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 /* CSS for your button */
 .amount-button {
     background-color: #2196f3; /* Blue background color */
