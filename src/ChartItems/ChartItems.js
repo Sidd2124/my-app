@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Chart from '../Context/Context';
 
 import './CartItems.css'
