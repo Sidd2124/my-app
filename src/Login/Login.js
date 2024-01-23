@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Cookies from 'js-cookie';
 import './LoginComponent.css';
-import { Fa } from 'react-icons/fa'; // Updated import statement
+
 
 const Login = (props) => {
   const [UserName, SetUserName] = useState("");
@@ -83,9 +83,9 @@ const Login = (props) => {
         }}
       />
       {showPassword ? (
-        <Fa icon={FaEyeSlash} onClick={handlePasswordToggle} />
+        <button onClick={handlePasswordToggle}>Show</button>  
       ) : (
-        <Fa icon={FaEye} onClick={handlePasswordToggle} />
+     <button onClick={handlePasswordToggle} >Hide</button>
       )}
       <button className="login-button" onClick={Login}>
         Log In
