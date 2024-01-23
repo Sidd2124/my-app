@@ -8,6 +8,8 @@ import Header from '../Header/Header';
 
 import { FaShopify } from "react-icons/fa";
 
+import AddressDetails from '../Address/Adress'
+
 
 import "./Cart.css"
 
@@ -30,6 +32,7 @@ const MyChart = () => {
         <div>
           <Header/>
           <h1>Cart</h1>
+          <AddressDetails/>
         <div className="CartItems">
           {ChartValue.map((each) => (
             <ChartItem key={each.id} ChartDetails={each} />

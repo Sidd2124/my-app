@@ -1,0 +1,106 @@
+
+.Email {
+    width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+    padding: 10px;
+    
+    
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+  }
+  
+  .Email h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .Email label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .Email div {
+    margin-bottom: 15px;
+  }
+  
+  .Email input,
+  .Email textarea {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .Email input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    width: 350px;
+  }
+  .Animi {
+    display: flex;
+    align-items: center;
+  }
+  
+  .typing-text {
+    overflow: hidden;
+    border-right: 0.15em solid orange; /* Adjust the border properties as needed */
+    white-space: nowrap;
+    margin: 0;
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange; /* Adjust the color as needed */
+    }
+  }
+  
+  .delivery-icon {
+    margin-left: 5px; /* Adjust the margin as needed */
+  }
+  
+  .logout-btns{
+font-size: 20px;
+  }
+  
+  .Email input[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsive styling for small screens */
+  @media screen and (max-width: 600px) {
+    .Email {
+      width: 300px;
+      margin-top: 20px;
+      height: 350px;
+    }
+    .Email input,
+  .Email textarea{
+    width: 280px;
+  }
+  .Email input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    width: 300px;
+  }
+  }
+  
