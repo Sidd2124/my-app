@@ -51,6 +51,7 @@ const Login = (props) => {
 
   const CookSetup = (Token) => {
     Cookies.set("Value", Token, { expires: 90, path: "/" });
+    localStorage.setItem("Tokens",Token)
   };
 
   const handlePasswordToggle = () => {
