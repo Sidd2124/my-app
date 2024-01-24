@@ -9,7 +9,7 @@ import Header from '../Header/Header';
 import { FaShopify } from "react-icons/fa";
 
 
-import AddressDetails from '../Address/Adress'
+import AddressDetails from '../Adress/Adress'
 
 
 import "./Cart.css"
