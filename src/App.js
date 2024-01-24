@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Switch, Route, Redirect, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect,  } from 'react-router-dom';
 import Login from './Login/Login';
 import Shoping from '../src/Shoping/Shoping';
 import MyChart from '../src/Chart/Chart';
