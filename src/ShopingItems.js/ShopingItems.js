@@ -12,7 +12,7 @@ const ShopingItems = (props) => {
 
   const AddtoChart = () => {
     NewChart(Details);
-   alert("Item Added to Cart Succesfully")
+   alert("Item Added to Cart Succesfully Saee Your @ Cart")
   };
   if (!Details) {
     console.error("Products prop is undefined or null:", props);

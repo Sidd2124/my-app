@@ -31,12 +31,13 @@ class Shoping extends Component {
   componentDidMount() {
     this.ShowProducts();
     setInterval(()=>{
-      const {Counting}=this.state
-      this.setState(prevState=>({Counting:prevState.Counting+1}))
+      const {Counting,TotalProducts}=this.state
+      const Random=Math.floor(Math.random()*TotalProducts.length)
+      this.setState({Counting:Random})
       if(Counting===54){
 this.setState({Counting:0})
       }
-    },1300)
+    },1500)
   }
 
   componentDidUpdate(_, prevState) {
