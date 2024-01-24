@@ -29,13 +29,13 @@ const AddressDetails = () => {
       );
 
       console.log(result.text);
-
+      SetDisplay("none")
       // Reset the form only after the email has been sent successfully
       e.target.reset();
 
       // Alert and redirect after successful email send
       alert('Adress Saved Successfully');
-      SetDisplay("none")
+   
     
     } catch (error) {
       console.error(error.text);
@@ -57,7 +57,8 @@ const AddressDetails = () => {
 
       <label>Contact Number</label>
       <div>
-        <input type="number" name="to_name" placeholder="Enter Your Contact Number" required />
+        <input type="tel" name="to_name" pattern="[0-9]{10}" placeholder="Enter Your Contact Number" required />
+   
       </div>
 
       <label>Address </label>
