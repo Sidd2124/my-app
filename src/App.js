@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter, Switch, Route, Redirect, Link } from 'react-router-dom';
 import Login from './Login/Login';
-import Home from '../src/Home/Home';
+
 import Shoping from '../src/Shoping/Shoping';
 import MyChart from '../src/Chart/Chart';
 import PrimeDeals from './PrimeDeals/PrimeDeals';
@@ -35,7 +35,7 @@ class App extends Component {
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={Login} />
-              <Route exact path="/Home" component={Home} />
+             
               <Route exact path="/Shop" component={Shoping} />
               <Route exact path="/PrimeDeals" component={PrimeDeals} />
               <Route exact path="/Chart" component={MyChart} />
@@ -46,7 +46,7 @@ class App extends Component {
                 component={() => (
                   <div>
                     <h1>NothingTo Found</h1>
-                    <Link to="/Home">
+                    <Link to="/Shop">
                       <button>Back to Home</button>
                     </Link>
                   </div>
