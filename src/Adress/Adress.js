@@ -58,7 +58,7 @@ const AddressDetails = () => {
 
       <label>Contact Number</label>
       <div>
-        <input type="tel" name="to_name" pattern="[0-9]{10}" placeholder="Enter Your Contact Number" required />
+        <input type="email" name="to_name"  placeholder="Enter Your Contact Number" required />
    
       </div>
 
