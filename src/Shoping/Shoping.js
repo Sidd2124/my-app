@@ -4,6 +4,8 @@ import { Redirect, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 
 import ShopingItems from '../ShopingItems.js/ShopingItems';
+
+import SlideItems from '../Slide Items/SlideItems'
 import './Shoping.css';
 
 const sortbyOptions = [
@@ -37,7 +39,7 @@ class Shoping extends Component {
       if(Counting===54){
 this.setState({Counting:0})
       }
-    },1500)
+    },2000)
   }
 
   componentDidUpdate(_, prevState) {
@@ -88,7 +90,7 @@ this.setState({Counting:0})
 
   render() {
     const { TotalProducts, IsLoading,Counting } = this.state;
-    const New=TotalProducts.map((each)=>each.ProductLogo)
+    
     
     const SKS = Cookies.get('Value');
 
@@ -100,6 +102,7 @@ this.setState({Counting:0})
     }
 
     return (
+
       <div className="container">
         <div className="products-container"></div>
         <Header />
@@ -109,6 +112,7 @@ this.setState({Counting:0})
           </div>
         ) : (
           <div>
+            
             <div className='Sort'>
               
               <select className="sort-select" onChange={this.handleSortChange}>
@@ -120,10 +124,13 @@ this.setState({Counting:0})
               </select>
              
             </div>
-            <img className='Timer' src={New[Counting]} alt="S"/>
+            <div className="TopSlider">
+            <SlideItems  ItemsInfo={TotalProducts[Counting]}/>
+
+            </div>
             <br/>
             <Link to="/PrimeDeals">
-              <button className="link-btn">Click me For Prime Deals's</button>
+              <button className="link-btn">Tap me For Prime Deals's</button>
             </Link>
             <div  className="shopping-item">
             {TotalProducts.map((each) => (

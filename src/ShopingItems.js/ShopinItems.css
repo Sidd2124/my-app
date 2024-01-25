@@ -39,11 +39,12 @@ width:330px ;
   margin: 10px 0; /* Increased margin for better spacing */
   display: flex;
   align-items: center;
+  color: orangered;
 }
 
 .rating span {
   margin-left: 5px;
-  color: #ffc107; /* Setting a color for the rating stars */
+  color: orangered; /* Setting a color for the rating stars */
 }
 .add-to-cart:hover {
   background-color: orange;

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { IoEyeOutline,IoEyeOffOutline } from "react-icons/io5";
+
 import Cookies from 'js-cookie';
 import './LoginComponent.css';
 
@@ -83,14 +85,16 @@ const Login = (props) => {
           }
         }}
       />
-      {showPassword ? (
-        <button onClick={handlePasswordToggle}>Show</button>  
-      ) : (
-     <button onClick={handlePasswordToggle} >Hide</button>
-      )}
+          {showPassword ? (
+         
+           <IoEyeOffOutline onClick={handlePasswordToggle}/>
+         ) : (
+          <IoEyeOutline onClick={handlePasswordToggle}/>  
+         )}
       <button className="login-button" onClick={Login}>
         Log In
       </button>
+  
       <p className="Error">{ErrorMsg}</p>
     </div>
   );

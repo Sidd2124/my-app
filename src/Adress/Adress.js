@@ -1,27 +1,33 @@
-
-
-import React, { useRef,useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-
-
-import { CiDeliveryTruck } from "react-icons/ci";
-
+import { CiDeliveryTruck } from 'react-icons/ci';
 import './Address.css';
 
 const AddressDetails = () => {
-  // Use destructuring to directly get 'history' from 'props'
+  const [display, setDisplay] = useState('');
+  const [adreAddress, setAddress] = useState(false);
+  const [countings, setCountings] = useState(0);
 
-  const [Displey,SetDisplay]=useState('')
-
-  // Ref for the form element
   const form = useRef();
 
-  // Function to send email
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCountings((prevCount) => prevCount + 1);
+
+      if (countings === 2) {
+        clearInterval(intervalId);
+        setAddress(false);
+      }
+    }, 1000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, [countings]); // useEffect dependency to avoid unnecessary re-renders
+
   const sendEmail = async (e) => {
     e.preventDefault();
 
     try {
-      // Use async/await for better readability and error handling
       const result = await emailjs.sendForm(
         'service_n5w6pck',
         'template_9c0aj98',
@@ -30,14 +36,11 @@ const AddressDetails = () => {
       );
 
       console.log(result.text);
-      SetDisplay("none")
+      setDisplay('none');
+      setAddress(true);
       // Reset the form only after the email has been sent successfully
       e.target.reset();
-
-      // Alert and redirect after successful email send
-      alert('Adress Saved Successfully');
-   
-    
+      setCountings(0)
     } catch (error) {
       console.error(error.text);
       // Handle the error (e.g., show an error message to the user)
@@ -45,31 +48,33 @@ const AddressDetails = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className="Email" style={{ display: Displey }}
-    >
-     <h3 className='Animi'>
-      <span className='typing-text'>Share Address to Deliver...</span>
-      <CiDeliveryTruck className='delivery-icon' />
-    </h3>
-      <label>Name :</label>
-      <div>
-        <input type="text" name="from_name" placeholder="Enter Your Name" required />
-      </div>
+    <div>
+      <form ref={form} onSubmit={sendEmail} className="Email" style={{ display: display }}>
+        <h3 className='Animi'>
+          <span className='typing-text'>Share Address to Deliver...</span>
+          <CiDeliveryTruck className='delivery-icon' />
+        </h3>
+        <label>Name </label>
+        <div>
+          <input type="text" name="from_name" placeholder="Enter Your Name" required />
+        </div>
 
-      <label>Contact Number</label>
-      <div>
-        <input type="email" name="to_name"  placeholder="Enter Your Contact Number" required />
-   
-      </div>
+        <label>Email</label>
+        <div>
+          <input type="email" name="to_name" placeholder="Enter Your Mail" required />
+        </div>
 
-      <label>Address </label>
-      <div>
-        <textarea name="message" placeholder="Enter Your Adress including PinCode" required />
-      </div>
+        <div>
+          <label>Contact&Adress </label>
+          <textarea name="message" placeholder="Enter Your Address Along With Contact " required />
+        </div>
 
-      <input type="submit" value="Send" className="Resume" />
-      
-    </form>
+        <input type="submit" value="Send" className="Resume" />
+      </form>
+
+      {adreAddress && <h1 className='AddAddress'>Address Added Successfully</h1>}
+  
+    </div>
   );
 };
 

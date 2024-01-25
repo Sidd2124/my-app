@@ -1,0 +1,84 @@
+.Timer {
+    border-radius: 8px;
+    display: flex;
+    width: 60%;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #6fcf97; /* Set your desired background color */
+    position: relative;
+    overflow: hidden; /* Ensure the overflow is hidden to clip the background image */
+    animation: scaleAnimation 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes scaleAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  img {
+    height: 100%; /* Set image height to 100% of its container */
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    border-radius: 8px; /* Apply border-radius to the image */
+  }
+  
+  .Timer > div {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+  }
+  
+  h1, p, h3, h4 {
+    margin: 0;
+  }
+  
+  .ItemLogo {
+    height: 100%; /* Set height to 100% of its container */
+    border-radius: 75% 25% 0% 64% / 0% 75% 25% 51%;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .Timer {
+      flex-direction: row;
+      text-align: center;
+    
+      font-size: 10px; /* Adjust font size for smaller screens */
+      height: 200px; /* Let the height be determined by content */
+    }
+  
+    button {
+      height: 30px;
+      font-size: 12px; /* Adjust font size for smaller screens */
+    }
+  
+    .Timer > div {
+      padding-right: 0;
+    }
+  
+    .ItemLogo {
+      width: 150px;
+      height: 90%; /* Allow the height to be determined by the content */
+    }
+  }
+
