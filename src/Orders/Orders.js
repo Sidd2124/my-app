@@ -10,6 +10,8 @@ import './Orders.css';
 
 const Orders = () => {
   const { OrderedItems } = useContext(Chart);
+ localStorage.setItem("Orders",OrderedItems)
+ 
 
   const OrderItem = (props) => {
     const { OrdersInfo } = props;
