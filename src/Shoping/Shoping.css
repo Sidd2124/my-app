@@ -64,9 +64,6 @@
   height: 40px;
 }
 
-/* Style the button inside the Link with a background color change on hover */
-/* ... Your existing CSS rules ... */
-
 /* Style the button inside the Link with a background color change on hover and animation */
 .link-btn {
   margin-top: 20px;
@@ -83,6 +80,7 @@
   overflow: hidden; /* Ensure the text is hidden initially */
   white-space: nowrap; /* Prevent line break */
   position: relative;
+  width: 100%; /* Make the link button full width on smaller screens */
 }
 
 .link-btn::after {
@@ -93,15 +91,6 @@
   overflow: hidden;
   border-right: 2px solid #fff; /* You can adjust the border style as needed */
   margin-left: 5px; /* Adjust spacing between letters */
-}
-
-@keyframes typing {
-  from {
-    width: 0; /* Start with zero width, gradually increase it */
-  }
-  to {
-    width: 100%; /* Full width at the end of animation */
-  }
 }
 
 .link-btn:hover {
@@ -139,25 +128,27 @@
   flex-wrap: wrap;
 }
 
-
-.Sort{
+.Sort {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
-.TopSlider{
-align-items: center;
-display: flex;
-text-align: center;
-justify-content: center;
+
+.TopSlider {
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
+
 /* Responsive Design - Adjust styles for smaller screens */
 @media (max-width: 600px) {
   .search-input {
     width: 100%;
     margin-bottom: 10px;
   }
-  .shopping-item{
+
+  .shopping-item {
     flex-direction: column;
   }
 
@@ -169,13 +160,8 @@ justify-content: center;
     width: 100%; /* Make the link button full width on smaller screens */
   }
   .Timer {
-    width: 270px;
+    width: 100%; /* Make the Timer full width on smaller screens */
     height: 150px;
-    
     border-radius: 8px;
-   
   }
-  
- 
-  
 }

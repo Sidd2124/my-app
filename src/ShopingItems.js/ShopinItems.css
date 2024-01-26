@@ -6,16 +6,16 @@
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   display: flex;
-  flex-direction:column ;
+  flex-direction: column;
   margin: 6px;
   padding: 6px;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-container:hover {
-  transform: scale(1.05); /* Slightly increased scaling on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .product-container div {
@@ -24,19 +24,18 @@
 }
 
 .product-logo {
-  
-width:330px ;
+  width: 330px;
   margin-bottom: 15px;
-  border-radius: 12px; /* Adding border-radius to the product logo */
+  border-radius: 12px;
 }
 
 .price {
   font-weight: bold;
-  margin: 10px 0; /* Increased margin for better spacing */
+  margin: 10px 0;
 }
 
 .rating {
-  margin: 10px 0; /* Increased margin for better spacing */
+  margin: 10px 0;
   display: flex;
   align-items: center;
   color: orangered;
@@ -44,8 +43,9 @@ width:330px ;
 
 .rating span {
   margin-left: 5px;
-  color: orangered; /* Setting a color for the rating stars */
+  color: orangered;
 }
+
 .add-to-cart:hover {
   background-color: orange;
 }
@@ -54,7 +54,7 @@ width:330px ;
   background-color: #4caf50;
   color: #fff;
   border: none;
-  padding: 12px 20px; /* Increased padding for better button size */
+  padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -66,18 +66,29 @@ width:330px ;
 }
 
 /* Responsive styling */
-
-
-
 @media (max-width: 600px) {
   .product-container {
-    width: calc(100% - 12px); /* Adjust width to account for margins */
+    width: calc(100% - 12px);
     border-radius: 0;
     box-shadow: none;
   }
 
   .product-container div {
-    padding: 15px; /* Adjust padding for better spacing on small screens */
+    padding: 15px;
+  }
+
+  .product-logo {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .price,
+  .rating {
+    margin: 5px 0;
+  }
+
+  .add-to-cart {
+    padding: 10px 15px;
+    font-size: 14px;
   }
 }
-
