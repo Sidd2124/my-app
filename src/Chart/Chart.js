@@ -65,8 +65,8 @@ const MyChart = (props) => {
           <h1>Cart</h1>
           <AddressDetails/>
         <div className="CartItems">
-          {ChartValue.map((each) => (
-            <ChartItem key={each.id} ChartDetails={each} />
+          {ChartValue.map((each,index) => (
+            <ChartItem key={index} ChartDetails={each} />
           ))}
           
           

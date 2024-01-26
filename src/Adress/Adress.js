@@ -11,14 +11,7 @@ const AddressDetails = () => {
 
   const form = useRef();
 
-  useEffect(() => {
-    // Check localStorage and set initial display state
-    const verified = localStorage.getItem("Save");
-
-    if (verified === "service_n5w6pck") {
-      setDisplay('none');
-    }
-  }, []);
+ 
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -33,10 +26,13 @@ const AddressDetails = () => {
     // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, [countings]); // useEffect dependency to avoid unnecessary re-renders
-
+  const RemoveLocally = () => {
+    setDisplay("inline")
+  }
+  
   const sendEmail = async (e) => {
     e.preventDefault();
-
+    setDisplay('none');
     try {
       const result = await emailjs.sendForm(
         'service_n5w6pck',
@@ -44,10 +40,10 @@ const AddressDetails = () => {
         form.current,
         'RuOh4MuvJuV8MsSJY'
       );
-localStorage.removeItem("Save")
 
+localStorage.setItem("Save", 'service_n5w6pck')
       console.log(result.text);
-      setDisplay('none');
+   
       setAddress(true);
       // Reset the form only after the email has been sent successfully
       e.target.reset();
@@ -57,12 +53,11 @@ localStorage.removeItem("Save")
       // Handle the error (e.g., show an error message to the user)
     }
   };
-const Verified=localStorage.getItem("Save")
-if(Verified==="Defined"){
-  setDisplay("none")
-}
+
   return (
     <div>
+     
+      
       <form ref={form} onSubmit={sendEmail} className="Email" style={{ display: display }}>
         <h3 className='Animi'>
           <span className='typing-text'>Share Address to Deliver...</span>
@@ -86,7 +81,7 @@ if(Verified==="Defined"){
         <input type="submit" value="Send" className="Resume" />
       </form>
 
-      {adreAddress && <h3 className='AddAddress'>Address Added Successfully&Check Your Mail For Delivery Status..</h3>}
+      {adreAddress && <h3 className='AddAddress'>Address Added Successfully..</h3>}
   
     </div>
   );

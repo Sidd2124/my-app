@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import { IoEyeOutline,IoEyeOffOutline } from "react-icons/io5";
+
 
 import Cookies from 'js-cookie';
 import './LoginComponent.css';
 
 
+import videoSource from './Bramhi.mp4'
 const Login = (props) => {
   const [UserName, SetUserName] = useState("");
   const [Password, SetPassword] = useState("");
-  const [showPassword, SetshowPassword] = useState(true);
+
   const [ErrorMsg, SetErrorMsg] = useState("");
-  const [FinelUserName, SetFinelUserName] = useState("");
-  const [FinelPassword, SetFinelPassword] = useState("");
+  const [FinelUserName, SetFinelUserName] = useState("rahul");
+  const [FinelPassword, SetFinelPassword] = useState("rahul@2021");
 
   console.log(UserName);
   console.log(Password);
@@ -36,7 +37,6 @@ const Login = (props) => {
       if (response.ok) {
         CookSetup(Code.jwt_token);
 
-        console.log(Code.error_msg);
         const { history } = props;
         history.push("/Shop");
       } else {
@@ -56,45 +56,17 @@ const Login = (props) => {
     localStorage.setItem("Tokens",Token)
   };
 
-  const handlePasswordToggle = () => {
-    SetshowPassword(!showPassword);
-  };
-
   return (
-    <div className="login-container">
-      <h3>Sidd Store Welcome's You...🤝</h3>
-      <input
-        className="login-input"
-        type="text"
-        placeholder="Enter UserName"
-        onChange={(e) => {
-          SetUserName(e.target.value);
-          if (e.target.value === "Sidd") {
-            SetFinelUserName("rahul");
-          }
-        }}
-      />
-      <input
-        className="login-input"
-        type={showPassword ? "password" : "Text"}
-        placeholder="Enter Password"
-        onChange={(e) => {
-          SetPassword(e.target.value);
-          if (e.target.value === "Sidd2124") {
-            SetFinelPassword("rahul@2021");
-          }
-        }}
-      />
-          {showPassword ? (
-         
-           <IoEyeOffOutline onClick={handlePasswordToggle}/>
-         ) : (
-          <IoEyeOutline onClick={handlePasswordToggle}/>  
-         )}
+    <div >
+   
+      
+          <video autoPlay  className="background-video">
+  <source src={videoSource} type="video/mp4" />
+</video>
+
       <button className="login-button" onClick={Login}>
-        Log In
+        Tap to Shop..(అంటే నొక్కితే షాపింగ్ కి వెళ్దాము అని)
       </button>
-  
       <p className="Error">{ErrorMsg}</p>
     </div>
   );

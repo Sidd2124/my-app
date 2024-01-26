@@ -1,0 +1,63 @@
+/* Orders.css */
+
+/* Common styles for product item */
+.product-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards; /* Apply the fadeIn animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px); /* Optional: Add a slight vertical translation */
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .product-logo {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+  
+    .product-item {
+      padding: 10px;
+    }
+  
+    h1, h3, h2 {
+      font-size: 14px;
+    }
+  }
+  .Order{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Further adjust styles for even smaller screens */
+  
+    .product-item {
+      margin: 5px;
+    }
+    .Order{
+        flex-direction: column;
+    }
+  
+    h1, h3, h2 {
+      font-size: 12px;
+    }
+  }
+  
