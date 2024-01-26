@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { CiDeliveryTruck } from 'react-icons/ci';
 import './Address.css';
 
+
 const AddressDetails = () => {
   const [display, setDisplay] = useState('');
   const [adreAddress, setAddress] = useState(false);
@@ -11,10 +12,19 @@ const AddressDetails = () => {
   const form = useRef();
 
   useEffect(() => {
+    // Check localStorage and set initial display state
+    const verified = localStorage.getItem("Save");
+
+    if (verified === "service_n5w6pck") {
+      setDisplay('none');
+    }
+  }, []);
+
+  useEffect(() => {
     const intervalId = setInterval(() => {
       setCountings((prevCount) => prevCount + 1);
 
-      if (countings === 2) {
+      if (countings === 3) {
         clearInterval(intervalId);
         setAddress(false);
       }
@@ -34,6 +44,7 @@ const AddressDetails = () => {
         form.current,
         'RuOh4MuvJuV8MsSJY'
       );
+localStorage.removeItem("Save")
 
       console.log(result.text);
       setDisplay('none');
@@ -46,7 +57,10 @@ const AddressDetails = () => {
       // Handle the error (e.g., show an error message to the user)
     }
   };
-
+const Verified=localStorage.getItem("Save")
+if(Verified==="Defined"){
+  setDisplay("none")
+}
   return (
     <div>
       <form ref={form} onSubmit={sendEmail} className="Email" style={{ display: display }}>
@@ -72,7 +86,7 @@ const AddressDetails = () => {
         <input type="submit" value="Send" className="Resume" />
       </form>
 
-      {adreAddress && <h1 className='AddAddress'>Address Added Successfully</h1>}
+      {adreAddress && <h3 className='AddAddress'>Address Added Successfully&Check Your Mail For Delivery Status..</h3>}
   
     </div>
   );

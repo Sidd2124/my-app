@@ -15,15 +15,14 @@ import AddressDetails from '../Adress/Adress'
 import "./Cart.css"
 
 const MyChart = (props) => {
-  const { ChartValue } = useContext(Chart);
+  const { ChartValue,Orders } = useContext(Chart);
   
-  console.log(ChartValue);
+  
 
   const Amount = ChartValue.map((each) => each.Price);
   const FinelAmount = Amount.length === 0 ? 0 : Amount.reduce((A, B) => A + B);
 
   const handleSubmit = ()=>{
-    
     
       var options = {
         key: "rzp_test_juufusxwk4a9jj",
@@ -36,6 +35,7 @@ const MyChart = (props) => {
           alert("PayMent Succefull ");
           const{history}=props
           history.push("./Shop")
+          Orders(ChartValue)
         },
         prefill: {
           name:"Sidd",

@@ -6,9 +6,10 @@ import Shoping from '../src/Shoping/Shoping';
 import MyChart from '../src/Chart/Chart';
 import PrimeDeals from './PrimeDeals/PrimeDeals';
 import Chart from '../src/Context/Context';
+import Orders from '../src/Orders/Orders'
 
 class App extends Component {
-  state = { UpdatedChart: [] };
+  state = { UpdatedChart: [],NewOrders:[] };
 
   FinelUpdate = (J) => {
     this.setState(prevState => ({ UpdatedChart: [...prevState.UpdatedChart, J] }));
@@ -19,12 +20,16 @@ class App extends Component {
     const Result = UpdatedChart.filter((each) => each.Id !== K);
     this.setState({ UpdatedChart: Result });
   };
+  AddingOrders=(Add)=>{
+this.setState({NewOrders:Add,UpdatedChart:[ ]})
+  }
 
   render() {
-    const { UpdatedChart } = this.state;
+    const { UpdatedChart,NewOrders } = this.state;
+    console.log(NewOrders)
 
     return (
-      <Chart.Provider value={{ ChartValue: UpdatedChart, NewChart: this.FinelUpdate, RemoveItem: this.ChartUpdating }}>
+      <Chart.Provider value={{ ChartValue: UpdatedChart, NewChart: this.FinelUpdate, RemoveItem: this.ChartUpdating,OrderedItems:NewOrders,Orders:this.AddingOrders }}>
         <BrowserRouter>
           <div className="App">
             <Switch>
@@ -32,6 +37,7 @@ class App extends Component {
               <Route exact path="/Shop" component={Shoping} />
               <Route exact path="/PrimeDeals" component={PrimeDeals} />
               <Route exact path="/Chart" component={MyChart} />
+              <Route exact path="/Orders" component={Orders}/>
               <Route
                 exact
                 path="/NothingtoFound"

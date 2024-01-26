@@ -94,8 +94,8 @@ this.setState({Counting:0})
     
     const SKS = Cookies.get('Value');
 
-    const LocalSetup=localStorage.getItem("Tokens")
-    console.log(LocalSetup)
+    
+
     if (SKS === undefined) {
       console.log('Redirecting to the home page...');
       return <Redirect to="/" />;
@@ -122,6 +122,9 @@ this.setState({Counting:0})
                   </option>
                 ))}
               </select>
+<Link to="/Orders">
+              <button> Your Orders</button>
+              </Link>
              
             </div>
             <div className="TopSlider">
