@@ -13,6 +13,14 @@ const AddressDetails = () => {
 
   const form = useRef();
 
+  useEffect(
+    ()=>{
+      const Item= localStorage.getItem("Save")
+      if(Item==="service_n5w6pck"){
+setDisplay("none")
+      }
+    },[]
+  )
  
 
   useEffect(() => {
@@ -28,9 +36,7 @@ const AddressDetails = () => {
     // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, [countings]); // useEffect dependency to avoid unnecessary re-renders
-  const RemoveLocally = () => {
-    setDisplay("inline")
-  }
+  
   
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -55,11 +61,13 @@ localStorage.setItem("Save", 'service_n5w6pck')
       // Handle the error (e.g., show an error message to the user)
     }
   };
-
+const UpdateAdress=()=>{
+  setDisplay("inline")
+}
   return (
     <div>
      
-      
+      {display==='none'&&<button onClick={UpdateAdress}>Update Deliery Adress</button>}
       <form ref={form} onSubmit={sendEmail} className="Email" style={{ display: display }}>
         <h3 className='Animi'>
           <span className='typing-text'>Share Address to Deliver...</span>

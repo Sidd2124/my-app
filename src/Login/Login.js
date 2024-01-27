@@ -5,17 +5,15 @@ import Cookies from 'js-cookie';
 import './LoginComponent.css';
 
 
-import videoSource from './Bramhi.mp4'
+import videoSource from '../Login/Bramhi.mp4'
 const Login = (props) => {
-  const [UserName, SetUserName] = useState("");
-  const [Password, SetPassword] = useState("");
+  
 
   const [ErrorMsg, SetErrorMsg] = useState("");
-  const [FinelUserName, SetFinelUserName] = useState("rahul");
-  const [FinelPassword, SetFinelPassword] = useState("rahul@2021");
+  const [FinelUserName] = useState("rahul");
+  const [FinelPassword] = useState("rahul@2021");
 
-  console.log(UserName);
-  console.log(Password);
+console.log(ErrorMsg)
 
   const Login = async () => {
     const data = {
@@ -60,14 +58,18 @@ const Login = (props) => {
     <div >
    
       
-          <video autoPlay  className="background-video">
-  <source src={videoSource} type="video/mp4" />
-</video>
+   <div>
+  <video autoPlay  className="background-video">
+    <source src={videoSource} type="video/mp4" />
+  </video>
 
-      <button className="login-button" onClick={Login}>
-        Tap to Shop..(అంటే నొక్కితే షాపింగ్ కి వెళ్దాము అని)
-      </button>
-      <p className="Error">{ErrorMsg}</p>
+  <button className="login-button" onClick={Login}>
+    Tap to Shop..(అంటే నొక్కితే షాపింగ్ కి వెళ్దాము అని)
+  </button>
+</div>
+
+      
+     
     </div>
   );
 };

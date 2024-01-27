@@ -9,6 +9,32 @@
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards; /* Apply the fadeIn animation */
   }
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333; /* Dark text color */
+    margin: 20px 0;
+  }
+  
+  span {
+    color: #ff6f61; /* Highlight color for the delivery date */
+  }
+  
+  /* Animation for a subtle text fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  h4 {
+    animation: fadeIn 1s ease-out; /* Apply the fade-in animation to the entire h4 */
+  }
+  
   
   @keyframes fadeIn {
     from {
