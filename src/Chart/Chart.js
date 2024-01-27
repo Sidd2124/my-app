@@ -27,10 +27,10 @@ const MyChart = (props) => {
       var options = {
         key: "rzp_test_juufusxwk4a9jj",
         key_secret:"ejXOtYG7NpnIoEztcocR",
-        amount: FinelAmount *100,
+        amount: 1 *100,
         currency:"INR",
         name:"Sidd Store",
-        description:"for testing purpose",
+        description:"Thank you for Shop",
         handler: function(){
           alert("PayMent Succefull ");
           const{history}=props
@@ -39,7 +39,7 @@ const MyChart = (props) => {
         },
         prefill: {
           name:"Sidd",
-          email:"mvel1620r@gmail.com",
+          email:"siddhumsd@gmail.com",
           contact:"9347877159"
         },
         notes:{
