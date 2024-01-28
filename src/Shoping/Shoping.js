@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Cookies from 'js-cookie';
 import { Redirect, Link } from 'react-router-dom';
 import Header from '../Header/Header';
-
+import { PacmanLoader } from 'react-spinners';
 import ShopingItems from '../ShopingItems.js/ShopingItems';
 
 import SlideItems from '../Slide Items/SlideItems'
@@ -109,6 +109,7 @@ this.setState({Counting:0})
         {IsLoading ? (
           <div className="Loading">
             <h1>Products On the way..</h1>
+            <PacmanLoader color="#FFA500" />
           </div>
         ) : (
           <div>

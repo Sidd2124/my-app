@@ -98,10 +98,13 @@
 }
 
 /* Loading Animation */
-.Loading h1 {
+.Loading  {
   overflow: hidden; /* Ensure the text is hidden initially */
   white-space: nowrap; /* Prevent line break */
-  /* Set animation properties */
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 

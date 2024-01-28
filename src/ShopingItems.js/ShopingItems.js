@@ -4,6 +4,7 @@ import "./ShopinItems.css";
 
 
 
+
 const ShopingItems = (props) => {
   const {Details}=props
   const { Title, ProductLogo, Price, Rating, Brand, Id } = Details;

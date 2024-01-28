@@ -1,4 +1,5 @@
 /* LoginComponent.css */
+
 body {
   display: flex;
   align-items: center;
@@ -6,6 +7,7 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -15,6 +17,28 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.containering {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url("https://i.ibb.co/pjqCCSZ/black-friday-elements-assortment.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 25px;
+  width: 100vw;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.ShopTittle {
+  background-color: rgba(255, 255, 255, 0.068);
+  height: 200px;
+  margin: 20px;
+
+  margin-bottom: 18px;
 }
 
 .login-container {
@@ -31,9 +55,9 @@ body {
   background-color: #fff;
   animation: fadeIn 0.8s ease-in-out;
 }
-h3{
-  font-family: Georgia, 'Times New Roman', Times, serif;
 
+h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .background-video {
@@ -42,12 +66,11 @@ h3{
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   z-index: -1;
 }
 
-
-.Error{
+.Error {
   color: red;
 }
 
@@ -65,20 +88,23 @@ h3{
   border-radius: 4px;
 }
 
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .login-button {
-  
-  height: 50px;
-text-align: center;
-  width: fit-content;
-  box-sizing: border-box;
-  margin-top: 300px;
-  background-color: #4caf4fe8;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  font-size: medium;
+  background-color:green;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation: buttonAnimation 1s infinite; /* Adjust the duration as needed */
 }
 
 .login-button:hover {
@@ -93,11 +119,50 @@ text-align: center;
   text-align: center;
   animation: fadeIn 0.5s ease-in-out;
 }
+
 @media (max-width: 600px) {
+  .containering{
+    background-image: url("https://i.ibb.co/pLQsFdV/IMG-1683.jpg");
+    padding: 0px;
+    
+  }
+  
+  .ShopTittle {
+    background-color: white;
+    padding: 10px;
+    margin: 0px;
+    
+    font-size: 15px;
+  }
   .login-container {
     width: 80%;
   }
-  .login-button{
-    font-size: small;
+  @keyframes buttonAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .login-button {
+    font-size: medium;
+    margin-top: 30px;
+    padding: 5px;
+    background-color: rgba(255, 166, 0, 0.774);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: buttonAnimation 1s infinite; /* Adjust the duration as needed */
+  }
+  
+  .Owner {
+    height: 400px;
+  }
+  .Title{
+    font-size: 40px;
+    margin-bottom: 15px;
   }
 }

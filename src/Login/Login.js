@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
-
-
 import Cookies from 'js-cookie';
 import './LoginComponent.css';
 
+import { FaCartShopping } from "react-icons/fa6";
 
-import videoSource from '../Login/Bramhi.mp4'
+
 const Login = (props) => {
-  
-
   const [ErrorMsg, SetErrorMsg] = useState("");
   const [FinelUserName] = useState("rahul");
   const [FinelPassword] = useState("rahul@2021");
 
-console.log(ErrorMsg)
+  console.log(ErrorMsg);
 
-  const Login = async () => {
+  const handleLogin = async () => {
     const data = {
       username: FinelUserName,
       password: FinelPassword,
@@ -51,25 +48,25 @@ console.log(ErrorMsg)
 
   const CookSetup = (Token) => {
     Cookies.set("Value", Token, { expires: 90, path: "/" });
-    localStorage.setItem("Tokens",Token)
+    localStorage.setItem("Tokens", Token);
   };
 
   return (
-    <div >
-   
-      
-   <div>
-  <video autoPlay  className="background-video">
-    <source src={videoSource} type="video/mp4" />
-  </video>
+    <div className="containering">
+  <div className='ShopTittle'> 
+         <h1 className='Title' >Sidd's Hub </h1>
+         <p>SiddMart - Elevate your online shopping experience with us. Discover a curated selection of high-quality products, seamless navigation, and exclusive deals. Your go-to destination for convenience and style</p>
+        <button className='login-button'  onClick={handleLogin}>
+          Tap to enter my hub <FaCartShopping/>
+        </button>
 
-  <button className="login-button" onClick={Login}>
-    Tap to Shop..(అంటే నొక్కితే షాపింగ్ కి వెళ్దాము అని)
-  </button>
-</div>
+        </div>
 
+
+       
+ 
+    
       
-     
     </div>
   );
 };
