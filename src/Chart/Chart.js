@@ -73,7 +73,7 @@ const MyChart = (props) => {
          
         </div>
         <div>
-          <h3>Refund Polocy</h3>
+          <h3>Refund Policy</h3>
           <p>
 We want you to be satisfied with your purchase. If you're not completely happy, we're here to help.
 </p>
