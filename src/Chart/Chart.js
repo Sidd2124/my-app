@@ -72,6 +72,33 @@ const MyChart = (props) => {
           
          
         </div>
+        <div>
+          <h3>Refund Polocy</h3>
+          <p>
+We want you to be satisfied with your purchase. If you're not completely happy, we're here to help.
+</p>
+<h3>Refunds</h3>
+<p>We offer a 3-days money-back guarantee on all our products. If you're not satisfied with your purchase for any reason, you may return it for a full refund within 3 days of the purchase date.
+
+To be eligible for a refund, your item must be unused and in the same condition that you received it. It must also be in the original packaging</p>
+<h3>Refund Process</h3>
+<ul>
+  <li>Contact us at tsiddu805@gmail.com/9347877159 to initiate the refund process</li>
+  <li>Our customer support team will provide you with further instructions on returning the item</li>
+  <li>Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.</li>
+  <li>If your refund is approved, it will be processed, and a credit will automatically be applied to your credit card or original method of payment within  3 days</li>
+</ul>
+<h3>Exchanges</h3>
+<p>If you need to exchange an item for a different one, please contact us at tsiddu805@gmail.com/9347877159. You will be responsible for any price difference and shipping costs associated with the exchange.</p>
+        <h3>Non-Refundable Items</h3>
+        <p>Certain items are non-refundable, including:</p>
+        <ul>
+          <li>Digital downloads</li>
+          <li>Gift cards</li>
+        </ul>
+        <h3>Contact Us</h3>
+            <p>f you have any questions about our refund policy, please contact us at tsiddu805@gmail.com/9347877159  .</p>
+        </div>
         <button className="amount-button" onClick={handleSubmit}>
      Tap to Pay {FinelAmount}/- ₹
     </button>
