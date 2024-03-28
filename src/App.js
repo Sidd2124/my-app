@@ -8,6 +8,8 @@ import PrimeDeals from './PrimeDeals/PrimeDeals';
 import Chart from '../src/Context/Context';
 import Orders from '../src/Orders/Orders'
 import Refund from './RefundPolicy/Refund'
+import Privacypolicy from './Privacy Policy/Privacypolicy'
+
 
 class App extends Component {
   state = { UpdatedChart: [],NewOrders:[] };
@@ -40,6 +42,7 @@ this.setState({NewOrders:Add,UpdatedChart:[ ]})
               <Route exact path="/Chart" component={MyChart} />
               <Route exact path="/Orders" component={Orders}/>
               <Route exact path="/Refund" component={Refund}/>
+              <Route exact path="/Privacypolicy" component={Privacypolicy}/>
               <Route
                 exact
                 path="/NothingtoFound"

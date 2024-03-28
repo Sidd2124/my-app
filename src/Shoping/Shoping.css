@@ -44,6 +44,12 @@
   animation: fadeIn 1s forwards;
 }
 
+.Privacy{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /* Style the filter icon with a rotation animation */
 .filter-icon {
   margin-right: 5px;
