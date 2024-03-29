@@ -4,9 +4,11 @@ import { Redirect, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import { PacmanLoader } from 'react-spinners';
 import ShopingItems from '../ShopingItems.js/ShopingItems';
-
 import SlideItems from '../Slide Items/SlideItems'
 import './Shoping.css';
+import Footer from '../Footer/Footer'
+import AboutUsPage from '../AboutUs/Aboutus'
+import ContactForm from '../ContactUs/Contact'
 
 const sortbyOptions = [
   {
@@ -126,17 +128,7 @@ this.setState({Counting:0})
 <Link to="/Orders">
               <button> Your Orders</button>
               </Link>
-<div className='Privacy'>             <Link to="/Refund">
-             <button>
-              Refund Policy& Terms And Conditions
-             </button>
-             </Link>
-             <Link to="/Privacypolicy">
-             <button>
-             Privacypolicy
-             </button>
-             </Link>
-             </div>
+
 
             </div>
             <div className="TopSlider">
@@ -156,6 +148,8 @@ this.setState({Counting:0})
             </div>
           </div>
         )}
+
+<Footer/>
       </div>
     );
   }

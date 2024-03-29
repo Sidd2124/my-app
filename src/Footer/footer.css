@@ -1,0 +1,14 @@
+.FooterTopLayer{
+    background-color: rgb(34, 32, 32);
+    color: white;
+  height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LayerTwo{
+margin: 70px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}

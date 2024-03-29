@@ -21,7 +21,7 @@ const Privacypolicy=()=>{
   </ul>
   <h3>Terms and Conditions:</h3>
 <p>Sidd's Hub  Terms and Conditions</p>
-<p>Effective Date: 18/March/2024</p>
+<p>Effective Date: 18/March/2023</p>
 <p>By accessing this Website, you are agreeing to be bound by these Website Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this Website are protected by applicable copyright and trademark law.</p>
 <h3>Use License:</h3>
 <ul>
